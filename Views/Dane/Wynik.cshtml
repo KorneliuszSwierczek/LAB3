@@ -1,0 +1,54 @@
+﻿@model LAB3.Models.Dane
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Wynik Formularza</title>
+    <style>
+        .center {
+            text-align: center;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="center">
+    <h1 class="bold">Wynik Formularza</h1>
+
+    <p class="bold">Imię: </p>
+    <p>@Model.Imie</p>
+
+    <p class="bold">Nazwisko: </p>
+    <p>@Model.Nazwisko</p>
+
+    <p class="bold">Email: </p>
+    <p>@Model.Email</p>
+
+    <p class="bold">Nr telefonu: </p>
+    <p>@Model.NrTelefonu</p>
+
+    <p class="bold">Wiek: </p>
+    <p>@Model.Wiek</p>
+
+    <p class="bold">Miasto: </p>
+    <p>@Model.Miasto</p>
+
+    <p class="bold">Teamt: </p>
+    <p>@Model.Temat</p>
+
+    <p class="bold">Treść: </p>
+    <p>@Model.Tresc</p>
+
+    @if (!string.IsNullOrEmpty(ViewBag.SuccessMessage))
+    {
+        <p class="bold">@ViewBag.SuccessMessage</p>
+    }
+</body>
+</html>

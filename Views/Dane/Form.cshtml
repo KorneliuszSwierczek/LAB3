@@ -1,0 +1,59 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Formularz Kontaktowy</title>
+</head>
+<body>
+    <h1>Formularz Kontaktowy</h1>
+
+    <form action="/Dane/Wynik" method="post">
+        <label for="imie">Imię:</label>
+        <input type="text" id="imie" name="imie" required><br><br>
+
+        <label for="nazwiko">Nazwisko:</label>
+        <input type="text" id="nazwisko" name="nazwisko" required><br><br>
+
+        <label for="email">Twój email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="Haslo">Hasło:</label>
+        <input type="password" id="Haslo" name="Haslo" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"><br><br>
+
+        <label for="PotwierdzHaslo">Potwierdź Hasło:</label>
+        <input type="password" id="PotwierdzHaslo" name="PotwierdzHaslo" required><br><br>
+
+
+        <label for="NrTelefonu">Nr telefonu:</label>
+        <input type="tel" id="NrTelefonu" name="NrTelefonu" required pattern="[0-9]{9,15}"><br><br>
+
+        <label for="Wiek">Wiek:</label>
+        <input type="number" id="Wiek" name="Wiek" min="11" max="80" required><br><br>
+
+        <label for="Miasto">Miasto:</label>
+        <select id="Miasto" name="Miasto" required>
+            <option value="">Wybierz</option>
+            <option value="Warszawa">Warszawa</option>
+            <option value="Kraków">Kraków</option>
+            <option value="Wrocław">Wrocław</option>
+            <option value="Gdańsk">Gdańsk</option>
+            <option value="Poznań">Poznań</option>
+        </select><br><br>
+
+        <label for="temat">Temat:</label>
+        <input type="text" id="temat" name="temat" required><br><br>
+
+        <label for="tresc">Treść:</label><br>
+        <textarea id="tresc" name="tresc" rows="8" cols="50" required></textarea><br><br>
+
+        <input type="reset" value="Wyczyść"><br><br>
+        <input type="submit" value="Wyślij">
+    </form>
+
+
+</body>
+</html>
